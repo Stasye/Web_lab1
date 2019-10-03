@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Lab 1</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<form method="POST" action="script.php" onsubmit="return check();">
+    <table id=main align="center">
+        <header align="center">
+            <h2 id="fio">Ерухимова Анастасия Григорьевна</h2>
+            <h2>Учебная группа P3200</h2>
+            <h2>Вариант №200007</h2>
+        </header>
+        <tr>
+            <td>
+                <table border=1 id=date>
+                    <tr>
+                        <td id="inputX" class="left">Введите X:
+                            <p id="one"></p>
+                        </td>
+                        <td id=boxes align="left">
+                            <input onchange="checkX()" type="checkbox" id="chechkbox1" value="-3" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox1">-3</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox2" value="-2" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox2">-2</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox3" value="-1" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox3">-1</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox4" value="0" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox4">0</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox5" value="1" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox5">1</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox6" value="2" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox6">2</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox7" value="3" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox7">3</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox8" value="4" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox8">4</label>
+                            <input onchange="checkX()" type="checkbox" id="chechkbox9" value="5" name="x"
+                                   onclick="selectOnlyThis(this)"/>
+                            <label for="chechkbox9">5</label></td>
+                    <tr>
+                        <td id="inputY" class="left">Введите Y:
+                            <p id=two></p></td>
+                        <td><input maxlength="22" onkeypress="return pressEnter(event)" onchange="checkY()" type="text" size=50% placeholder="[-5...5]" name="y"
+                                   id="textinput"/></td>
+                    </tr>
+                    <tr>
+                        <td id=buttons class="left">Введите R:
+                            <p id="three"></p>
+                        </td>
+                        <td id=button align="center">
+                            <input type="button" value="1" name="r" onclick="pressR(1)"/>
+                            <input type="button" value="1.5" name="r" onclick="pressR(1.5)"/>
+                            <input type="button" value="2" name="r" onclick="pressR(2)"/>
+                            <input type="button" value="2.5" name="r" onclick="pressR(2.5)"/>
+                            <input type="button" value="3" name="r" onclick="pressR(3)"/></td>
+							<input type="hidden" value="0" id="r0" name="r0"/>
+                    </tr>
+                    <tr>
+                        <td id="final" colspan=2>
+                            <button id="submit" onClick="check(this);">ПРОВЕРИТЬ</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table id=picture>
+                    <tr>
+                        <td>
+                            <h2 align="center">Проверяемая область:</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" id=photo rowspan="2">
+                            <img width="320" height="300"
+                                 src="area.jpg">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</form>
+</body>
+</html>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
